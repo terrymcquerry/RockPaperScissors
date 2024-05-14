@@ -5,3 +5,9 @@ function getComputerChoice() {
     if (number == 2) {return "scissors"}
 }
 
+function getHumanChoice() {
+    let humanChoice = prompt("rock, paper, or scissors")
+    if (humanChoice.toLowerCase() == "rock") {return "rock"}
+    if (humanChoice.toLowerCase() == "paper") {return "paper"}
+    if (humanChoice.toLowerCase() == "scissors") {return "scissors"}
+}
