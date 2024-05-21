@@ -12,8 +12,6 @@ function getHumanChoice() {
     if (promptChoice.toLowerCase() == "scissors") {return "scissors"}
 }
 
-
-
 function playGame() {
 let humanScore = 0
 let computerScore = 0
