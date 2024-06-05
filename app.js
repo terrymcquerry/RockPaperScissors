@@ -1,3 +1,27 @@
+let humanScore = 0
+let computerScore = 0
+let humanChoice;
+let computerChoice;
+
+const rockBtn = document.querySelector("#rockBtn");
+rockBtn.addEventListener("click", () => {
+    humanChoice = "rock";
+    computerChoice = getComputerChoice();
+    playGame();
+})
+const paperBtn = document.querySelector("#paperBtn");
+paperBtn.addEventListener("click", () => {
+    humanChoice = "paper";
+    computerChoice = getComputerChoice();
+    playGame();
+})
+const scissorsBtn = document.querySelector("#scissorsBtn");
+scissorsBtn.addEventListener("click", () => {
+    humanChoice = "scissors";
+    computerChoice = getComputerChoice();
+    playGame();
+})
+
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
     if (number == 0) {return "rock"}
@@ -5,21 +29,8 @@ function getComputerChoice() {
     if (number == 2) {return "scissors"}
 }
 
-function getHumanChoice() {
-    let promptChoice = prompt("rock, paper, or scissors?")
-    if (promptChoice.toLowerCase() == "rock") {return "rock"}
-    if (promptChoice.toLowerCase() == "paper") {return "paper"}
-    if (promptChoice.toLowerCase() == "scissors") {return "scissors"}
-}
-
 function playGame() {
-let humanScore = 0
-let computerScore = 0
-for (let i = 0; i < 5; i++) {
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
-playRound(humanChoice, computerChoice)}
-function playRound(humanChoice, computerChoice) {
+
 if (humanChoice == "rock" && computerChoice == "paper"){
 console.log("you lose!"),
 computerScore++}
@@ -44,10 +55,6 @@ console.log("you lose!"),
 computerScore++}
 if (humanChoice == "scissors" && computerChoice == "scissors"){
 console.log("it's a tie!")}
-}
-console.log(humanScore, computerScore)
-}
 
+console.log(humanScore, computerScore)}
 
-
-playGame();
